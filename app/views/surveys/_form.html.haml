@@ -2,7 +2,7 @@
   = f.error_notification
   = f.input :title, label: "Survey title"
 
-  = f.simple_fields_for :question, @survey.question.build do |q|
+  = f.simple_fields_for :questions, @survey.questions.build do |q|
     = q.input :content, label: "Question content"
     = q.simple_fields_for :answers, q.object.answers.build do |a|
       = a.input :content, label: "Answer content"
