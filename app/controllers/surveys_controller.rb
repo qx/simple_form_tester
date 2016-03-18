@@ -71,7 +71,12 @@ class SurveysController < ApplicationController
     def survey_params
       params.require(:survey).permit(:title,
                                      questions_attributes: [:content,
-                                                            answers_attributes:   [:content]]
+                                                            answers_attributes:   [:content],
+                                                            addresses_attributes: [:city_id,
+                                                                                   :district_id,
+                                                                                   :province_id
+                                                            ]
+                                     ]
       )
 
     end

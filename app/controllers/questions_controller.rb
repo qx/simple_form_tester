@@ -70,7 +70,12 @@ class QuestionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
       params.require(:question).permit(:content,
-                                       answers_attributes: [:content])
+                                       answers_attributes: [:content],
+                                       addresses_attributes: [:city_id,
+                                                              :district_id,
+                                                              :province_id
+                                       ]
+      )
 
     end
 end

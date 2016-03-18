@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city_id: 
+  district_id: 
+  province_id: 
+  question_id: 
+
+two:
+  city_id: 
+  district_id: 
+  province_id: 
+  question_id: 

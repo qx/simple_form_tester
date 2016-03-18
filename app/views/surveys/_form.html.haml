@@ -6,5 +6,6 @@
     = q.input :content, label: "Question content"
     = q.simple_fields_for :answers, q.object.answers.build do |a|
       = a.input :content, label: "Answer content"
-
+    = q.simple_fields_for :addresses, q.object.addresses.build do |a|
+      = a.region_select [:province, :city, :district]
   = f.button :submit
